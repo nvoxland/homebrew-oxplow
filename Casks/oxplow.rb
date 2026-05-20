@@ -1,6 +1,6 @@
 cask "oxplow" do
-  version "0.4.1"
-  sha256 "c1148f4e514746eb0680928596559daa6461d477ad101f42c88b553ebb0286c9"
+  version "0.4.2"
+  sha256 "d893500e6c3e7d986ea2e3cb4bda92d7bf15a2c684a27d145ea4f1995ed9f777"
 
   url "https://github.com/nvoxland/oxplow/releases/download/v#{version}/Oxplow_#{version}_aarch64.dmg"
   name "Oxplow"
@@ -15,6 +15,7 @@ cask "oxplow" do
   depends_on arch: :arm64
 
   app "Oxplow.app"
+  binary "#{appdir}/Oxplow.app/Contents/MacOS/oxplow"
 
   # Homebrew strips the com.apple.quarantine attribute on every
   # cask install by default (`brew install --cask` without
@@ -25,11 +26,11 @@ cask "oxplow" do
   # No extra directive needed here — just don't pass `--quarantine`.
 
   zap trash: [
-    "~/Library/Application Support/com.voxland.oxplow",
+    "~/Library/Application Support/net.voxland.oxplow",
     "~/Library/Application Support/oxplow",
-    "~/Library/Preferences/com.voxland.oxplow.plist",
-    "~/Library/Saved Application State/com.voxland.oxplow.savedState",
-    "~/Library/Caches/com.voxland.oxplow",
-    "~/Library/WebKit/com.voxland.oxplow",
+    "~/Library/Preferences/net.voxland.oxplow.plist",
+    "~/Library/Saved Application State/net.voxland.oxplow.savedState",
+    "~/Library/Caches/net.voxland.oxplow",
+    "~/Library/WebKit/net.voxland.oxplow",
   ]
 end
