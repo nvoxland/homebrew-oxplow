@@ -1,6 +1,6 @@
 cask "oxplow" do
-  version "0.4.2"
-  sha256 "d893500e6c3e7d986ea2e3cb4bda92d7bf15a2c684a27d145ea4f1995ed9f777"
+  version "0.5.0"
+  sha256 "2b25626cda2b8335ff7470ef9e6616cd58b5886bd6c2d33a77d8dede609bca04"
 
   url "https://github.com/nvoxland/oxplow/releases/download/v#{version}/Oxplow_#{version}_aarch64.dmg"
   name "Oxplow"
